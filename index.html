@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Slider Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Number Slider Challenge</h1>
+        <p class="instructions">Slide to input your phone number! Timer starts automatically.</p>
+        
+        <div class="game-area">
+            <div class="display-area">
+                <div class="number-display" id="currentNumber">1000000000000</div>
+                <div class="timer" id="timer">00:00:00</div>
+            </div>
+            
+            <div class="slider-container">
+                <input type="range" min="0" max="1999999999999" value="1000000000000" step="1" id="phoneSlider">
+            </div>
+            
+            <div class="buttons">
+                <button id="finishButton">I Got My Number!</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+        
+        <div class="result" id="result"></div>
+    </div>
+    
+    <!-- Results Dialog -->
+    <div id="resultsDialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <span class="close-button" id="closeDialog">&times;</span>
+            <h2>Your Results</h2>
+            <div id="dialogContent"></div>
+            <div id="rankingsTable"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
